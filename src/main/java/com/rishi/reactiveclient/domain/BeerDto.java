@@ -3,6 +3,8 @@ package com.rishi.reactiveclient.domain;
 import lombok.*;
 
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Null;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -15,12 +17,13 @@ import java.util.UUID;
 public class BeerDto {
 
 
+    @Null
     private UUID id;
 
-    @NonNull
+    @NotBlank
     private String beerName;
 
-    @NonNull
+    @NotBlank
     private String beerStyle;
 
     private String upc;
