@@ -20,7 +20,7 @@ class BeerClientImplTest {
 
     @Test
     void listBeers() {
-        Mono<BeerPagedList> beerPagedListMono = beerClient.listBeers(null,null,null,null,null);
+        Mono<BeerPagedList> beerPagedListMono = beerClient.listBeers(null,null,"Mango Bobs",null,null);
         BeerPagedList beerPagedList = beerPagedListMono.block();
         assertNotNull(beerPagedList);
         System.out.println("Op is -->>" + beerPagedList.toList());
